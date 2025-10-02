@@ -112,7 +112,7 @@ class HardwareInterfaceNode(Node):
             Float32MultiArray,
             'joint_pos_rel',
             self.joint_pos_rel_callback,
-            10
+            50
         )
         self.sub_pos_rel # prevent unused variable warning
 
