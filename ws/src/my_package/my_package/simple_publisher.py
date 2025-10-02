@@ -10,7 +10,7 @@ class SimplePublisher(Node):
         super().__init__('simple_publisher')  # Initialize the node with the name 'simple_publisher'
         # Create a publisher object with String message type on the topic 'advanced_topic'
         # The second argument '10' is the queue size
-        self.publisher_ = self.create_publisher(String, 'topic', 10)
+        self.publisher_ = self.create_publisher(String, '/joint_pos', 10)
         timer_period = 0.5  # Setting the timer period to 0.5 second
         # Create a timer that calls the timer_callback method every 0.5 second
         self.timer = self.create_timer(timer_period, self.timer_callback)
