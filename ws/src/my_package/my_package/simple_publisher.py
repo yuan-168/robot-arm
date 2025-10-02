@@ -17,7 +17,7 @@ class SimplePublisher(Node):
 
     def timer_callback(self):
         msg = String()  # Creating a String message object
-        msg.data = 'Hello ROS2 from Publisher, hi!'  # Setting the message data
+        msg.data = 'joint_pos is :'  # Setting the message data
         self.publisher_.publish(msg)  # Publishing the message
         # Logging the published message to the console
         self.get_logger().info('Publishing: "%s"' % msg.data)
